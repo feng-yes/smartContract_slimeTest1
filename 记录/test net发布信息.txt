@@ -1,0 +1,31 @@
+2_token_migration.js
+====================
+
+   Deploying 'ABCToken'
+   --------------------
+   > transaction hash:    0x48e5089a72583ba7f5f6887f8f04ddaf73ebcbd243f6df270cc8670393d24818
+   > Blocks: 3            Seconds: 9
+   > contract address:    0x4E43750FDe8a69f5F3cBC85B25E3e0cF1419fA45
+   > block number:        15064689
+   > block timestamp:     1639785108
+   > account:             0x2dFE2988C771cAeFCA49F95BA264727758B50762
+   > balance:             0.98281048
+   > gas used:            1484455 (0x16a6a7)
+   > gas price:           10 gwei
+   > value sent:          0 ETH
+   > total cost:          0.01484455 ETH
+
+   Pausing for 10 confirmations...
+   -------------------------------
+   > confirmation number: 1 (block: 15064691)
+   > confirmation number: 3 (block: 15064693)
+   > confirmation number: 4 (block: 15064694)
+   > confirmation number: 5 (block: 15064695)
+   > confirmation number: 7 (block: 15064697)
+   > confirmation number: 9 (block: 15064699)
+   > confirmation number: 11 (block: 15064701)
+
+   > Saving migration to chain.
+   > Saving artifacts
+   -------------------------------------
+   > Total cost:          0.01484455 ETH
