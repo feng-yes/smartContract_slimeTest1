@@ -41,11 +41,11 @@ contract ABCToken is Context, IERC20, Ownable {
   string public _symbol;
   string public _name;
 
-  constructor() public {
-    _name = "SMT1 token";
-    _symbol = "smt1";
+  function firstMint(string memory name_, string memory symbol_, uint256 totalSupply_) internal onlyOwner {
+    _name = name_;
+    _symbol = symbol_;
     _decimals = 18;
-    _totalSupply = 100000000000000000000000000;
+    _totalSupply = totalSupply_;
     _balances[msg.sender] = _totalSupply;
 
     emit Transfer(address(0), msg.sender, _totalSupply);
