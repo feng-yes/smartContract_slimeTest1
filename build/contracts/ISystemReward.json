@@ -20,13 +20,13 @@
       "type": "function"
     }
   ],
-  "metadata": "{\"compiler\":{\"version\":\"0.6.4+commit.1dca32f3\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"address payable\",\"name\":\"to\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"}],\"name\":\"claimRewards\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"project:/contracts/ISystemReward.sol\":\"ISystemReward\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"project:/contracts/ISystemReward.sol\":{\"keccak256\":\"0x1817f9ceff515d6b4d8c3878769e4cd618996628987936d4b33ec0a1a997774f\",\"urls\":[\"bzz-raw://7858fe9ca568f69ebcb2778ddb0a975900838c271f34ba254987b9796d350f23\",\"dweb:/ipfs/QmXfpBZGoRPeFyLragiHAF5RJJGN9jtv1bzi3fTfUP56UK\"]}},\"version\":1}",
+  "metadata": "{\"compiler\":{\"version\":\"0.6.4+commit.1dca32f3\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"address payable\",\"name\":\"to\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"}],\"name\":\"claimRewards\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"project:/contracts/ISystemReward.sol\":\"ISystemReward\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"project:/contracts/ISystemReward.sol\":{\"keccak256\":\"0x3f9b5d4742623e1214280c953f6db28af5a34db9fcf40f3cebe7f9595f836c38\",\"urls\":[\"bzz-raw://c2b7cbbc61522306937d7d86baced0ca02a902a51ed5ce4aad7e9a30d79f87aa\",\"dweb:/ipfs/QmXKMdjGXdyS8Q6HsYXaohffUHxVcH2DEqEnB2W4uSTcWF\"]}},\"version\":1}",
   "bytecode": "0x",
   "deployedBytecode": "0x",
   "sourceMap": "",
   "deployedSourceMap": "",
-  "source": "pragma solidity 0.6.4;\n\ninterface ISystemReward {\n    function claimRewards(address payable to, uint256 amount) external;\n}\n",
-  "sourcePath": "D:\\project_data\\smart_contract\\project\\bscTest1\\contracts\\ISystemReward.sol",
+  "source": "pragma solidity 0.6.4;\r\n\r\ninterface ISystemReward {\r\n    function claimRewards(address payable to, uint256 amount) external;\r\n}\r\n",
+  "sourcePath": "D:\\myfile\\developer\\smart_contract\\pro\\smartContract_slimeTest1\\contracts\\ISystemReward.sol",
   "ast": {
     "absolutePath": "project:/contracts/ISystemReward.sol",
     "exportedSymbols": {
@@ -83,7 +83,7 @@
                   "nodeType": "VariableDeclaration",
                   "overrides": null,
                   "scope": 1292,
-                  "src": "76:18:8",
+                  "src": "79:18:8",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -94,7 +94,7 @@
                     "id": 1286,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "76:15:8",
+                    "src": "79:15:8",
                     "stateMutability": "payable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address_payable",
@@ -111,7 +111,7 @@
                   "nodeType": "VariableDeclaration",
                   "overrides": null,
                   "scope": 1292,
-                  "src": "96:14:8",
+                  "src": "99:14:8",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -122,7 +122,7 @@
                     "id": 1288,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
-                    "src": "96:7:8",
+                    "src": "99:7:8",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -132,26 +132,26 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "75:36:8"
+              "src": "78:36:8"
             },
             "returnParameters": {
               "id": 1291,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "120:0:8"
+              "src": "123:0:8"
             },
             "scope": 1293,
-            "src": "54:67:8",
+            "src": "57:67:8",
             "stateMutability": "nonpayable",
             "virtual": false,
             "visibility": "external"
           }
         ],
         "scope": 1294,
-        "src": "24:99:8"
+        "src": "26:101:8"
       }
     ],
-    "src": "0:124:8"
+    "src": "0:129:8"
   },
   "legacyAST": {
     "attributes": {
@@ -236,12 +236,12 @@
                         },
                         "id": 1286,
                         "name": "ElementaryTypeName",
-                        "src": "76:15:8"
+                        "src": "79:15:8"
                       }
                     ],
                     "id": 1287,
                     "name": "VariableDeclaration",
-                    "src": "76:18:8"
+                    "src": "79:18:8"
                   },
                   {
                     "attributes": {
@@ -263,17 +263,17 @@
                         },
                         "id": 1288,
                         "name": "ElementaryTypeName",
-                        "src": "96:7:8"
+                        "src": "99:7:8"
                       }
                     ],
                     "id": 1289,
                     "name": "VariableDeclaration",
-                    "src": "96:14:8"
+                    "src": "99:14:8"
                   }
                 ],
                 "id": 1290,
                 "name": "ParameterList",
-                "src": "75:36:8"
+                "src": "78:36:8"
               },
               {
                 "attributes": {
@@ -284,22 +284,22 @@
                 "children": [],
                 "id": 1291,
                 "name": "ParameterList",
-                "src": "120:0:8"
+                "src": "123:0:8"
               }
             ],
             "id": 1292,
             "name": "FunctionDefinition",
-            "src": "54:67:8"
+            "src": "57:67:8"
           }
         ],
         "id": 1293,
         "name": "ContractDefinition",
-        "src": "24:99:8"
+        "src": "26:101:8"
       }
     ],
     "id": 1294,
     "name": "SourceUnit",
-    "src": "0:124:8"
+    "src": "0:129:8"
   },
   "compiler": {
     "name": "solc",
@@ -307,7 +307,7 @@
   },
   "networks": {},
   "schemaVersion": "3.4.3",
-  "updatedAt": "2021-12-22T19:15:56.898Z",
+  "updatedAt": "2021-12-23T07:14:23.874Z",
   "devdoc": {
     "methods": {}
   },

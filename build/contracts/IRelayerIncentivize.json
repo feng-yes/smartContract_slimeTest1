@@ -26,13 +26,13 @@
       "type": "function"
     }
   ],
-  "metadata": "{\"compiler\":{\"version\":\"0.6.4+commit.1dca32f3\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"address payable\",\"name\":\"headerRelayerAddr\",\"type\":\"address\"},{\"internalType\":\"address payable\",\"name\":\"caller\",\"type\":\"address\"}],\"name\":\"addReward\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"payable\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"project:/contracts/IRelayerIncentivize.sol\":\"IRelayerIncentivize\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"project:/contracts/IRelayerIncentivize.sol\":{\"keccak256\":\"0x0e27b6ea0a5974f0f3c7facf69c614812b6ac5efe18285a624af0a902ea9007c\",\"urls\":[\"bzz-raw://8ed6b618805975fcdf167ac07912919bd7e19a26a5b02bb25226687a3151eec1\",\"dweb:/ipfs/QmQSQ7g8hMooXWf6oBdCrMcR26FPSZvQ6s3svVq94NCJL4\"]}},\"version\":1}",
+  "metadata": "{\"compiler\":{\"version\":\"0.6.4+commit.1dca32f3\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"address payable\",\"name\":\"headerRelayerAddr\",\"type\":\"address\"},{\"internalType\":\"address payable\",\"name\":\"caller\",\"type\":\"address\"}],\"name\":\"addReward\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"payable\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"project:/contracts/IRelayerIncentivize.sol\":\"IRelayerIncentivize\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"project:/contracts/IRelayerIncentivize.sol\":{\"keccak256\":\"0x6fff81e0de80b6314b7b88514066d5fe038a87ae1e4600bcd5296939ee349412\",\"urls\":[\"bzz-raw://fb8121326cd93cd01c4e3f60ae1d124e14ad66d07e296d8d71d260699f82d140\",\"dweb:/ipfs/QmUVL5LuAeYbqXPowD5Yzv7rM1Z7pNapk3t1DPvFPsujv7\"]}},\"version\":1}",
   "bytecode": "0x",
   "deployedBytecode": "0x",
   "sourceMap": "",
   "deployedSourceMap": "",
-  "source": "pragma solidity 0.6.4;\n\ninterface IRelayerIncentivize {\n\n    function addReward(address payable headerRelayerAddr, address payable caller) external payable returns (bool);\n\n}\n",
-  "sourcePath": "D:\\project_data\\smart_contract\\project\\bscTest1\\contracts\\IRelayerIncentivize.sol",
+  "source": "pragma solidity 0.6.4;\r\n\r\ninterface IRelayerIncentivize {\r\n\r\n    function addReward(address payable headerRelayerAddr, address payable caller) external payable returns (bool);\r\n\r\n}\r\n",
+  "sourcePath": "D:\\myfile\\developer\\smart_contract\\pro\\smartContract_slimeTest1\\contracts\\IRelayerIncentivize.sol",
   "ast": {
     "absolutePath": "project:/contracts/IRelayerIncentivize.sol",
     "exportedSymbols": {
@@ -89,7 +89,7 @@
                   "nodeType": "VariableDeclaration",
                   "overrides": null,
                   "scope": 1282,
-                  "src": "80:33:7",
+                  "src": "84:33:7",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -100,7 +100,7 @@
                     "id": 1274,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "80:15:7",
+                    "src": "84:15:7",
                     "stateMutability": "payable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address_payable",
@@ -117,7 +117,7 @@
                   "nodeType": "VariableDeclaration",
                   "overrides": null,
                   "scope": 1282,
-                  "src": "115:22:7",
+                  "src": "119:22:7",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -128,7 +128,7 @@
                     "id": 1276,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "115:15:7",
+                    "src": "119:15:7",
                     "stateMutability": "payable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address_payable",
@@ -139,7 +139,7 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "79:59:7"
+              "src": "83:59:7"
             },
             "returnParameters": {
               "id": 1281,
@@ -152,7 +152,7 @@
                   "nodeType": "VariableDeclaration",
                   "overrides": null,
                   "scope": 1282,
-                  "src": "165:4:7",
+                  "src": "169:4:7",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -163,7 +163,7 @@
                     "id": 1279,
                     "name": "bool",
                     "nodeType": "ElementaryTypeName",
-                    "src": "165:4:7",
+                    "src": "169:4:7",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bool",
                       "typeString": "bool"
@@ -173,20 +173,20 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "164:6:7"
+              "src": "168:6:7"
             },
             "scope": 1283,
-            "src": "61:110:7",
+            "src": "65:110:7",
             "stateMutability": "payable",
             "virtual": false,
             "visibility": "external"
           }
         ],
         "scope": 1284,
-        "src": "24:150:7"
+        "src": "26:154:7"
       }
     ],
-    "src": "0:175:7"
+    "src": "0:182:7"
   },
   "legacyAST": {
     "attributes": {
@@ -271,12 +271,12 @@
                         },
                         "id": 1274,
                         "name": "ElementaryTypeName",
-                        "src": "80:15:7"
+                        "src": "84:15:7"
                       }
                     ],
                     "id": 1275,
                     "name": "VariableDeclaration",
-                    "src": "80:33:7"
+                    "src": "84:33:7"
                   },
                   {
                     "attributes": {
@@ -299,17 +299,17 @@
                         },
                         "id": 1276,
                         "name": "ElementaryTypeName",
-                        "src": "115:15:7"
+                        "src": "119:15:7"
                       }
                     ],
                     "id": 1277,
                     "name": "VariableDeclaration",
-                    "src": "115:22:7"
+                    "src": "119:22:7"
                   }
                 ],
                 "id": 1278,
                 "name": "ParameterList",
-                "src": "79:59:7"
+                "src": "83:59:7"
               },
               {
                 "children": [
@@ -333,32 +333,32 @@
                         },
                         "id": 1279,
                         "name": "ElementaryTypeName",
-                        "src": "165:4:7"
+                        "src": "169:4:7"
                       }
                     ],
                     "id": 1280,
                     "name": "VariableDeclaration",
-                    "src": "165:4:7"
+                    "src": "169:4:7"
                   }
                 ],
                 "id": 1281,
                 "name": "ParameterList",
-                "src": "164:6:7"
+                "src": "168:6:7"
               }
             ],
             "id": 1282,
             "name": "FunctionDefinition",
-            "src": "61:110:7"
+            "src": "65:110:7"
           }
         ],
         "id": 1283,
         "name": "ContractDefinition",
-        "src": "24:150:7"
+        "src": "26:154:7"
       }
     ],
     "id": 1284,
     "name": "SourceUnit",
-    "src": "0:175:7"
+    "src": "0:182:7"
   },
   "compiler": {
     "name": "solc",
@@ -366,7 +366,7 @@
   },
   "networks": {},
   "schemaVersion": "3.4.3",
-  "updatedAt": "2021-12-22T19:15:56.897Z",
+  "updatedAt": "2021-12-23T07:14:23.873Z",
   "devdoc": {
     "methods": {}
   },
