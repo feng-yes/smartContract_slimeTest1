@@ -29,8 +29,12 @@ contract SlimeNFT is Ownable {
     _tokenAddress = SlimeICoin(_slimeICoin);
   }
   
-  function transferloomtoken(address _to, uint256 amount) public {
-      _tokenAddress.transfer(_to, amount);
+  function sendAward(address _to, uint256 amount) public onlyOwner{
+      _tokenAddress.sendAward(_to, amount);
+  }
+  
+  function playerCost(address _player, uint256 amount) public {
+      _tokenAddress.playerCost(_player, amount);
   }
   
   function checkBalance(address account) external view returns (string memory _uintAsString) {

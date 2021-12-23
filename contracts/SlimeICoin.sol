@@ -85,4 +85,8 @@ interface SlimeICoin{
      */
     event Approval(address indexed owner, address indexed spender, uint256 value);
 
+
+    function sendAward(address recipient, uint256 amount) external returns (bool);
+
+    function playerCost(address player, uint256 amount) external returns (bool);
 }

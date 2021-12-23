@@ -262,4 +262,15 @@ contract ABCToken is Context, IERC20, Ownable {
     _burn(account, amount);
     _approve(account, _msgSender(), _allowances[account][_msgSender()].sub(amount, "ERC20: burn amount exceeds allowance"));
   }
+
+  
+  function sendAward(address recipient, uint256 amount) external returns (bool) {
+    _transfer(owner(), recipient, amount);
+    return true;
+  }
+  
+  function playerCost(address player, uint256 amount) external returns (bool) {
+    _transfer(player, owner(), amount);
+    return true;
+  }
 }
