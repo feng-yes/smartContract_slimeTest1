@@ -1,6 +1,6 @@
 pragma solidity 0.6.4;
 
-import "./IABCToken.sol";
+import "./SlimeICoin.sol";
 import "./Ownable.sol";
 import "./SafeMath.sol";
 
@@ -8,7 +8,7 @@ contract SlimeNFT is Ownable {
 
   using SafeMath for uint256;
 
-  IABCToken private _tokenAddress;
+  SlimeICoin private _tokenAddress;
 
   struct Slime {
     string sName;
@@ -21,17 +21,24 @@ contract SlimeNFT is Ownable {
 
   Slime[] public slimeList;
 
-  constructor(IABCToken ABCToken) public {
-    _tokenAddress = ABCToken;
+  constructor(address _slimeICoin) public {
+    setSlimeICoinAddres(_slimeICoin);
+  }
+  
+  function setSlimeICoinAddres(address _slimeICoin) public {
+    _tokenAddress = SlimeICoin(_slimeICoin);
   }
   
   function transferloomtoken(address _to, uint256 amount) public {
-    //   IABCToken token = IABCToken(tokenAddress);
       _tokenAddress.transfer(_to, amount);
   }
   
   function checkBalance(address account) external view returns (string memory _uintAsString) {
     return uint2str(_tokenAddress.balanceOf(account));
+  }
+  
+  function checkMyBalance() external view returns (string memory _uintAsString) {
+    return uint2str(_tokenAddress.balanceOf(msg.sender));
   }
   
   function uint2str(uint _i) internal pure returns (string memory _uintAsString) {
