@@ -1,4 +1,6 @@
-pragma solidity 0.6.4;
+// contracts/GLDToken.sol
+// SPDX-License-Identifier: MIT
+pragma solidity 0.8.0;
 
 import "./SlimeICoin.sol";
 import "./Ownable.sol";
@@ -21,7 +23,7 @@ contract SlimeNFT is Ownable {
 
   Slime[] public slimeList;
 
-  constructor(address _slimeICoin) public {
+  constructor(address _slimeICoin) {
     setSlimeICoinAddres(_slimeICoin);
   }
   
@@ -30,7 +32,7 @@ contract SlimeNFT is Ownable {
   }
   
   function sendAward(address _to, uint256 amount) public onlyOwner{
-      _tokenAddress.sendAward(_to, amount);
+      _tokenAddress.sendToPlayer(_to, amount);
   }
   
   function playerCost(address _player, uint256 amount) public {

@@ -34,7 +34,8 @@ contract ABCToken is Context, IERC20, Ownable {
 
   mapping (address => uint256) private _balances;
 
-  mapping (address => mapping (address => uint256)) private _allowances;
+  // 允许其他帐号支配自己一部分balances
+  mapping (address => mapping (address => uint256)) internal _allowances;
 
   uint256 private _totalSupply;
   uint8 public _decimals;
@@ -131,6 +132,10 @@ contract ABCToken is Context, IERC20, Ownable {
    * `amount`.
    */
   function transferFrom(address sender, address recipient, uint256 amount) external override returns (bool) {
+    return _transferFrom(sender, recipient, amount);
+  }
+
+  function _transferFrom(address sender, address recipient, uint256 amount) internal returns (bool) {
     _transfer(sender, recipient, amount);
     _approve(sender, _msgSender(), _allowances[sender][_msgSender()].sub(amount, "ERC20: transfer amount exceeds allowance"));
     return true;
@@ -263,14 +268,4 @@ contract ABCToken is Context, IERC20, Ownable {
     _approve(account, _msgSender(), _allowances[account][_msgSender()].sub(amount, "ERC20: burn amount exceeds allowance"));
   }
 
-  
-  function sendAward(address recipient, uint256 amount) external returns (bool) {
-    _transfer(owner(), recipient, amount);
-    return true;
-  }
-  
-  function playerCost(address player, uint256 amount) external returns (bool) {
-    _transfer(player, owner(), amount);
-    return true;
-  }
 }
