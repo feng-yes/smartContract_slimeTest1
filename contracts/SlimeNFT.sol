@@ -39,10 +39,6 @@ contract SlimeNFT is Ownable {
       _tokenAddress.playerCost(_player, amount);
   }
   
-  function checkBalance(address account) external view returns (string memory _uintAsString) {
-    return uint2str(_tokenAddress.balanceOf(account));
-  }
-  
   function checkMyBalance() external view returns (string memory _uintAsString) {
     return uint2str(_tokenAddress.balanceOf(msg.sender));
   }

@@ -127,6 +127,30 @@ contract SlimeCoin is SlimeTokenbase {
       return allowance(owner(), admin);
     }
 
+    function decreaseOwnerAllowance(uint256 subtractedValue) external onlyAdmin returns (bool) {
+        uint256 currentAllowance = allowance(owner(), _msgSender());
+        require(currentAllowance >= subtractedValue, "ERC20: decreased allowance below zero");
+        unchecked {
+            _approve(owner(), _msgSender(), currentAllowance - subtractedValue);
+        }
+        return true;
+    }
+
+    function increaseOwnerAllowance(uint256 addedValue) external onlyAdmin returns (bool) {
+        _approve(owner(), _msgSender(), allowance(owner(), _msgSender()).add(addedValue));
+        return true;
+    }
+
+    function sendToPlayerOnly(address player, uint256 amount) external onlyAdmin returns (bool) {
+      _transfer(owner(), player, amount);
+      return true;
+    }
+    
+    function playerCostOnly(address player, uint256 amount) external onlyAdmin returns (bool) {
+      _transfer(player, owner(), amount);
+      return true;
+    }
+
     function sendToPlayer(address player, uint256 amount) external onlyAdmin returns (bool) {
       transferFrom(owner(), player, amount);
       return true;
