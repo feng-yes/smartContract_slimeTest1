@@ -18,8 +18,8 @@ contract SlimeNFT is IERC20, Ownable {
     uint iDna;  // 基因是6位数
     uint iSkillId;
     uint iRank; // 稀有度 1-N，2-R，以此类推
-    uint64 iExperience; //经验值
-    uint32 iLevel; //等级
+    uint256 iExperience; //经验值
+    uint256 iLevel; //等级
   }
   Slime[] public slimeList;
   mapping (uint256 => address) slimeIdxToOwner;
