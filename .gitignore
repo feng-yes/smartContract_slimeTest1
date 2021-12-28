@@ -1,1 +1,3 @@
 /build/contracts/
+/contracts_backup/
+.secret

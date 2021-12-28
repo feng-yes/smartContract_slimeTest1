@@ -6,6 +6,7 @@ pragma solidity 0.8.0;
 import "./IBEP20.sol";
 
 interface SlimeICoin is IBEP20{
+    function checkAdminAllowance(address admin) external view returns (uint256);
 
     function decreaseOwnerAllowance(uint256 subtractedValue) external returns (bool);
 
