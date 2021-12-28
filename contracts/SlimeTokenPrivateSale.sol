@@ -5,11 +5,11 @@ pragma solidity 0.8.0;
 import "./SlimeICoin.sol";
 import "./Ownable.sol";
 import "./SafeMath.sol";
+import "./LibSlimeSafeCoin.sol";
 import "@openzeppelin/contracts/token/ERC20/utils/TokenTimelock.sol";
-import "@openzeppelin/contracts/token/ERC20/utils/SafeERC20.sol";
 
 contract SlimeTokenPrivateSale is Ownable {
-  using SafeERC20 for SlimeICoin;
+  using LibSlimeSafeCoin for SlimeICoin;
   using SafeMath for uint256;
 
   SlimeICoin _tokenAddress;
@@ -46,12 +46,12 @@ contract SlimeTokenPrivateSale is Ownable {
   function buyCoins() external payable{
     uint256 amountAll = msg.value / price;
     require(amountAll >= 100, 'No enough money');
-    _tokenAddress.decreaseOwnerAllowance(amountAll);
+    _tokenAddress.safeDecreaseOwnerAllowance(amountAll);
 
     uint256 amountPre = amountAll.div(divCount + 1);
     uint256 amountLast = amountAll - amountPre * divCount;
     
-    _tokenAddress.sendToPlayerOnly(msg.sender, amountLast);
+    _tokenAddress.safeSendToPlayerOnly(msg.sender, amountLast);
 
     sendEventList storage sl = beneficiaryMap[msg.sender];
     sl.size = 0;
@@ -80,7 +80,7 @@ contract SlimeTokenPrivateSale is Ownable {
     }
 
     require(amountAll > 0, "no coins to release");
-    _tokenAddress.sendToPlayerOnly(msg.sender, amountAll);
+    _tokenAddress.safeSendToPlayerOnly(msg.sender, amountAll);
     return true;
   }
 }

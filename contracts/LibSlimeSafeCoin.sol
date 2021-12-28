@@ -35,7 +35,7 @@ library LibSlimeSafeCoin {
     }
 
     function safeTransfer(
-        IERC20 token,
+        SlimeICoin token,
         address to,
         uint256 value
     ) internal {
@@ -43,7 +43,7 @@ library LibSlimeSafeCoin {
     }
 
     function safeTransferFrom(
-        IERC20 token,
+        SlimeICoin token,
         address from,
         address to,
         uint256 value
@@ -59,7 +59,7 @@ library LibSlimeSafeCoin {
      * {safeDecreaseAllowance} instead.
      */
     function safeApprove(
-        IERC20 token,
+        SlimeICoin token,
         address spender,
         uint256 value
     ) internal {
@@ -74,7 +74,7 @@ library LibSlimeSafeCoin {
     }
 
     function safeIncreaseAllowance(
-        IERC20 token,
+        SlimeICoin token,
         address spender,
         uint256 value
     ) internal {
@@ -83,7 +83,7 @@ library LibSlimeSafeCoin {
     }
 
     function safeDecreaseAllowance(
-        IERC20 token,
+        SlimeICoin token,
         address spender,
         uint256 value
     ) internal {
@@ -101,7 +101,7 @@ library LibSlimeSafeCoin {
      * @param token The token targeted by the call.
      * @param data The call data (encoded using abi.encode or one of its variants).
      */
-    function _callOptionalReturn(IERC20 token, bytes memory data) private {
+    function _callOptionalReturn(SlimeICoin token, bytes memory data) private {
         // We need to perform a low level call here, to bypass Solidity's return data size checking mechanism, since
         // we're implementing it ourselves. We use {Address.functionCall} to perform this call, which verifies that
         // the target address contains contract code and also asserts for success in the low-level call.

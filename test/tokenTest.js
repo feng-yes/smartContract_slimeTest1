@@ -13,7 +13,10 @@ contract("SlimeCoin", accounts => {
           })
           .then(outCoinBalance => {
             let metaCoinBalance = outCoinBalance.toString();
-            console.log("balanceOf: ", metaCoinBalance);
+            console.log("balanceOf: accounts[0]", metaCoinBalance);
+          })
+          .then(() => {
+            return slimeCoinIns.changeAdminAddress(1, accounts[0]);
           })
           .then(() => {
             return slimeCoinIns.changeAdminAddress(1, accounts[0]);
