@@ -8,12 +8,12 @@ import "./SlimeTokenbase.sol";
 contract SlimeCoin is SlimeTokenbase {
     using SafeMath for uint256;
 
-    uint16 _adminsId = 0;
+    uint _adminsId = 0;
 
     struct AdminMgr
     {
       // admins => adminsId
-      mapping(address=>uint16) map;
+      mapping(address=>uint) map;
       address[] keys;
     }
     AdminMgr _adminMgr;
@@ -42,10 +42,11 @@ contract SlimeCoin is SlimeTokenbase {
       _adminsId++;
       _adminMgr.map[account] = _adminsId;
       _adminMgr.keys.push(account);
-      return _adminsId;
+      // return _adminsId;
+      return _adminMgr.keys.length;
     }
 
-    function changeAdminAddress(uint16 adminsId_, address account) external onlyOwner {
+    function changeAdminAddress(uint adminsId_, address account) external onlyOwner {
       require(_adminMgr.map[account] == 0, "already admin");
       address oldAdmin;
       uint keyIndex;
@@ -109,7 +110,7 @@ contract SlimeCoin is SlimeTokenbase {
       return _adminMgr.map[admin];
     }
     
-    function getAdminAdressByID(uint16 adminsId_) external view onlyOwner returns (address) {
+    function getAdminAdressByID(uint adminsId_) external view onlyOwner returns (address) {
       uint keyIndex;
       bool bFind = false;
       for (uint i = 0; i<_adminMgr.keys.length; i++){
