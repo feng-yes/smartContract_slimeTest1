@@ -17,24 +17,14 @@ contract SlimeCoin is SlimeTokenbase {
       address[] keys;
     }
     AdminMgr _adminMgr;
-
+    
     modifier onlyAdmin() {
       require(_adminMgr.map[msg.sender] != 0, "not admin");
       _;
     }
-    
+
     constructor() ERC20("SMT1 coin", "smt1") {
         _mint(msg.sender, 12000000 * (10 ** uint256(decimals())));
-    }
-
-    function mint(address account, uint256 amount) external onlyOwner returns (bool) {
-      _mint(account, amount);
-      return true;
-    }
-
-    function burn(address account, uint256 amount) external onlyOwner returns (bool) {
-      _burn(account, amount);
-      return true;
     }
     
     function setAdmin(address account) external onlyOwner returns (uint) {
@@ -98,6 +88,10 @@ contract SlimeCoin is SlimeTokenbase {
     //   return true;
     // }
     
+    function buyCoins() external payable{
+      _transfer(owner(), _msgSender(), msg.value);
+    }
+
     function checkAdminLen() external view onlyOwner returns (uint) {
       return _adminMgr.keys.length;
     }
