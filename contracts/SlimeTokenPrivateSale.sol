@@ -42,6 +42,10 @@ contract SlimeTokenPrivateSale is Ownable {
   function setPrice(uint256 _value) external onlyOwner {
     price = _value;
   }
+  
+  function setReleaseTime(uint256 _value) external onlyOwner {
+    releaseTimePre = _value;
+  }
 
   function buyCoins() external payable{
     uint256 amountAll = msg.value / price;

@@ -87,10 +87,6 @@ contract SlimeCoin is SlimeTokenbase {
     //   _burnFrom(account, amount);
     //   return true;
     // }
-    
-    function buyCoins() external payable{
-      _transfer(owner(), _msgSender(), msg.value);
-    }
 
     function checkAdminLen() external view onlyOwner returns (uint) {
       return _adminMgr.keys.length;
